@@ -4,7 +4,7 @@ FROM node:latest
 LABEL Noah Makau <noshkim78@gmail.com>
 
 COPY . /client
-WORKDIR /yolo
+WORKDIR /client
 RUN npm install
 RUN npm run build
 RUN npm install -g serve

@@ -3,7 +3,7 @@ FROM node:latest
 LABEL Noah Makau <noshkim78@gmail.com>
 
 COPY . /backend
-WORKDIR /yolo
+WORKDIR /backend
 RUN npm install
 
 EXPOSE 5000

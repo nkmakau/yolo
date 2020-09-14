@@ -46,9 +46,9 @@ nosh_client for frontend
 nosh_backend for the backend
 
 # Docker Hub Images
-[Yolo Client](https://hub.docker.com/r/ammlyf/yolo_client)
+[Yolo Client](https://hub.docker.com/r/noshmak/client)
 
-[Yolo Backend](https://hub.docker.com/r/ammlyf/yolo_backend)
+[Yolo Backend](https://hub.docker.com/r/noshmak/backend)
 
 # Prerequistes
 Docker

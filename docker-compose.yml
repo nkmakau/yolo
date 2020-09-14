@@ -7,7 +7,7 @@ services:
     ports:
       - '3000:3000'
     networks: 
-      - nosh_yolo
+      - nosh
     depends_on:
       - backend
   
@@ -18,7 +18,7 @@ services:
     ports:
       - '5000:5000'
     networks: 
-      - nosh_yolo
+      - nosh
     depends_on:
       - mongo
   
@@ -29,13 +29,13 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - mongodata:/data/db
+      - mongodata:/var/lib/shared/mongodata
     networks: 
-      - nosh_yolo
+      - nosh
 
 volumes:
   mongodata:
 
 networks:
-  nosh_yolo:
+  nosh:
     driver: "bridge"

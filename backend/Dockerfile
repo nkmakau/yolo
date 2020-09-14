@@ -4,11 +4,9 @@ LABEL version="2.0"
 LABEL description="This is backend base docker image"
 LABEL maintainer="Noah Makau <noshkim78@gmail.com>"
 
-WORKDIR /usr/src/backend
+WORKDIR /backend
+COPY . /backend
 
 RUN npm install
-
-COPY . .
-
 EXPOSE 5000
 CMD [ "npm", "start" ]

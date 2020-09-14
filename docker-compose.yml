@@ -1,33 +1,41 @@
 version: '3.7'
 services:
+  #client container
   client:
+    container_name: nosh_client
     build: ./client
     ports:
       - '3000:3000'
-    volumes:
-      - yolo-volume:/var/lib/shared/yolo
+    networks: 
+      - nosh_yolo
     depends_on:
       - backend
-    networks: 
-      - backends
+  
+  #backend container
   backend:
+    container_name: nosh_backend
     build: ./backend
     ports:
       - '5000:5000'
-    volumes:
-      - yolo-volume:/var/lib/shared/yolo
+    networks: 
+      - nosh_yolo
     depends_on:
       - mongo
-    networks: 
-      - backends
+  
+#db container
   mongo:
+    container_name: nosh_mongo
     image: mongo
     ports:
       - '27017:27017'
     volumes:
-      - yolo-volume:/var/lib/shared/yolo
+      - mongodata:/data/db
+    networks: 
+      - nosh_yolo
+
 volumes:
-  yolo-volume:
+  mongodata:
+
 networks:
-  backends:
+  nosh_yolo:
     driver: "bridge"

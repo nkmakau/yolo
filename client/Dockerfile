@@ -1,7 +1,11 @@
 # build environment
-FROM node:latest
+FROM node:13.12.0-alpine as client
 
-LABEL Noah Makau <noshkim78@gmail.com>
+LABEL version="1.0"
+LABEL description="This is client base docker image"
+LABEL maintainer="Noah Makau <noshkim78@gmail.com>"
+
+ENV PATH /client/node_modules/.bin:$PATH
 
 COPY . /client
 WORKDIR /client

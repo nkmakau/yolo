@@ -5,12 +5,13 @@ LABEL version="1.0"
 LABEL description="This is client base docker image"
 LABEL maintainer="Noah Makau <noshkim78@gmail.com>"
 
+WORKDIR /usr/src/client
 
-ENV PATH /client/node_modules/.bin:$PATH
+COPY package*.jason ./
 
-COPY . /client
-WORKDIR /client
 RUN npm install
+COPY ..
+
 RUN npm run build
 RUN npm install -g serve
 

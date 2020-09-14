@@ -4,3 +4,15 @@ This image is based on the popular Alpine Linux project, available in the alpine
 
 Mongo: for the database:
 This we did not need to build but pull it directly docker hub.
+
+# Docker Directives
+Used the following 
+FROM
+COPY
+RUN
+WORKDIR
+EXPOSE
+ENV
+CMD
+LABEL
+

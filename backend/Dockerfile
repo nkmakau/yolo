@@ -4,7 +4,6 @@ LABEL version="2.0"
 LABEL description="This is backend base docker image"
 LABEL maintainer="Noah Makau <noshkim78@gmail.com>"
 
-TAG noshmak/backend
 
 ENV PATH /backend/node_modules/.bin:$PATH 
 

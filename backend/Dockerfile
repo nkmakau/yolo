@@ -1,6 +1,8 @@
 FROM node:latest
 
-LABEL Noah Makau <noshkim78@gmail.com>
+LABEL version="1.0"
+LABEL description="This is our base docker image"
+LABEL maintainer="Noah Makau <noshkim78@gmail.com>"
 
 COPY . /backend
 WORKDIR /backend

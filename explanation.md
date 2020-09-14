@@ -56,7 +56,7 @@ Docker Compose
 
 # Instructions
 Run the followind commands on terminal to build the app on docker
-    git clone https://github.com/noshmak/yolo.git
-    cd yolo
-    docker-compose up --build
-    Access App on http://localhost:3000
+    1. git clone https://github.com/noshmak/yolo.git
+    2. cd yolo
+    3. docker-compose up --build
+    4. Access App on http://localhost:3000

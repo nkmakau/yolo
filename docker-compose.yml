@@ -8,6 +8,8 @@ services:
       - yolo-volume:/var/lib/shared/yolo
     depends_on:
       - backend
+    networks: 
+      - backends
   backend:
     build: ./backend
     ports:
@@ -16,6 +18,8 @@ services:
       - yolo-volume:/var/lib/shared/yolo
     depends_on:
       - mongo
+    networks: 
+      - backends
   mongo:
     image: mongo
     ports:
@@ -24,3 +28,6 @@ services:
       - yolo-volume:/var/lib/shared/yolo
 volumes:
   yolo-volume:
+networks:
+  backends:
+    driver: "bridge"

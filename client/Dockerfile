@@ -5,6 +5,8 @@ LABEL version="1.0"
 LABEL description="This is client base docker image"
 LABEL maintainer="Noah Makau <noshkim78@gmail.com>"
 
+TAG noshmak/client 
+
 ENV PATH /client/node_modules/.bin:$PATH
 
 COPY . /client

@@ -10,7 +10,7 @@ WORKDIR /usr/src/client
 COPY package*.jason ./
 
 RUN npm install
-COPY ..
+COPY . .
 
 RUN npm run build
 RUN npm install -g serve

@@ -37,10 +37,26 @@ No bugs noted in case of any kindly contact author.
 # Docker image tag
 Images are tagged with the name of the application:
 mongo - for mongodb
-yolo-client for front end image
-yolo-backend for bankend image.
+yolo-client is tagged as noshmak/client
+yolo-backend is tagged as noshmak/backend
 
 Containers are also tagged the same:
-yolo_mongo_1 for the database
-yolo_client_1 for frontend
-yolo_backend_1 for the backend
+nosh_mongo for the database
+nosh_client for frontend
+nosh_backend for the backend
+
+# Docker Hub Images
+[Yolo Client](https://hub.docker.com/r/ammlyf/yolo_client)
+
+[Yolo Backend](https://hub.docker.com/r/ammlyf/yolo_backend)
+
+# Prerequistes
+Docker
+Docker Compose
+
+# Instructions
+Run the followind commands on terminal to build the app on docker
+    git clone https://github.com/noshmak/yolo.git
+    cd yolo
+    docker-compose up --build
+    Access App on http://localhost:3000

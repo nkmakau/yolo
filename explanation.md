@@ -7,23 +7,23 @@ This we did not need to build but pull it directly docker hub.
 
 # Docker Directives
 Used the following 
-FROM
-COPY
-RUN
-WORKDIR
-EXPOSE
-ENV
-CMD
-LABEL
+FROM sets base images for backend, client and mongo
+COPY copies files to containers
+RUN initiates commands to install and build
+WORKDIR holds files for the current directory
+EXPOSE opens up ports for apps
+Network builds the intercontainer network
+CMD commands to fire up our app
+LABEL gives decription, names, version to our images
 
 VOLUME
 
 # Docker-compose Networking
-Build a network titled yolo-network linking the 3 containers
+Build a bridge network titled nosh-yolo linking the 3 containers
 
 # Docker-compose Volume
-Used yolo-volume
-seats in var/lib/shared/yolo
+Used volume have called mongodata to hold DB data.
+seats in var/lib/shared/mongodata
 
 # Git workflow
 Changed remote repo to nkmakau
